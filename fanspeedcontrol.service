@@ -1,0 +1,11 @@
+[Unit]
+Description=Set fan speed based on CPU temperature
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c /usr/bin/imac-fanspeed.sh
+Restart=always
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target
