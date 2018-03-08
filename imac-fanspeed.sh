@@ -3,7 +3,7 @@ MAX_TEMP=100000 # Temperature where fans run at max speed
 MIN_TEMP=50000 # Temperature where fans are off
 MAX_SPEED=2400 # Maximum fan speed
 MIN_SPEED=1000 # Minimum fan speed
-FAN_BASENAME=/sys/class/hwmon/hwmon1/device/ # Path of the device the fan is controlled by
+FAN_BASENAME=/sys/class/hwmon/hwmon0/device/ # Path of the device the fan is controlled by
 FAN_NAME=fan1 # Name of the fan
 FAN_OUTPUT=_output # Suffix of the file name where the fan speed is written to
 FAN_INPUT=_input # Suffix of the file name where the fan speed is read from
@@ -11,7 +11,7 @@ FAN_ENABLE=_manual # Suffix of the file name to enable manual fan speed control
 FAN_OFF=1000 # RPM for the fan in "idle" state
 ADJUST_INTERVAL=5 # Number of seconds to wait for the speed changes to apply
 
-current_temp=$(cat /sys/class/hwmon/hwmon0/temp1_input)
+current_temp=$(cat /sys/class/hwmon/hwmon1/temp1_input)
 current_fan_speed=$(cat $FAN_BASENAME$FAN_NAME$FAN_INPUT)
 
 echo "Current temperature is $current_temp °C."
