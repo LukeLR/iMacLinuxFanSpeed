@@ -1,7 +1,7 @@
 #!/bin/bash
 MAX_TEMP=100000 # Temperature where fans run at max speed
 MIN_TEMP=50000 # Temperature where fans are off
-MAX_SPEED=2400 # Maximum fan speed
+MAX_SPEED=2700 # Maximum fan speed
 MIN_SPEED=1000 # Minimum fan speed
 FAN_BASENAME=/sys/class/hwmon/hwmon0/device/ # Path of the device the fan is controlled by
 FAN_NAME=fan1 # Name of the fan
